@@ -17,8 +17,8 @@ exports.normalize = function(input) {
     payload.duration = Math.ceil(payload.time_sec * 1000000000.0 + payload.time_nanosec)
   }
 
-  // Inject error hash if it does not exist
-  if (payload.errors.stack && !payload.errors.stackHash) {
+  // Inject error hash
+  if (payload.errors.stack) {
     payload.errors.stackHash = crypto.createHash('sha256').update(payload.errors.stack).digest('hex');
   }
 
