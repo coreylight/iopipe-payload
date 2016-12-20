@@ -1,0 +1,21 @@
+{
+  "aws": {},
+  "environment": {
+    "host": {},
+    "os": {
+      "linux": {
+        "cpu": {},
+        "mem": {},
+        "pid": {
+          "self": {}
+        }
+      }
+    },
+    "python": {},
+    "nodejs": {
+      "memoryUsage": {}
+    }
+  },
+  "errors": {},
+  "events": {}
+}
