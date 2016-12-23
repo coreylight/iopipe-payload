@@ -1,7 +1,7 @@
 import copy
 import json
 
-with open('./schema.json') as schema
+with open('./schema.json') as schema:
     PAYLOAD_SCHEMA = json.load(schema)
 
 def merge(a, b, path=None):
