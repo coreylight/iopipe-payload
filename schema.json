@@ -7,7 +7,7 @@
         "cpu": {},
         "mem": {},
         "pid": {
-          "self":
+          "self": {
             "stat": {},
             "stat_start": {},
             "status": {}
