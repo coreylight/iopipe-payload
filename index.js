@@ -5,11 +5,11 @@ const PAYLOAD_SCHEMA = require('./schema.json')
 exports.PAYLOAD_SCHEMA = PAYLOAD_SCHEMA
 
 exports.normalize = function(input) {
-  var payload = deepmerge(PAYLOAD_SCHEMA, input)
+  var payload = deepmerge(PAYLOAD_SCHEMA, input || {})
 
   // Copy memoryUsage.rss into VmRSS if it does not exist && node.
-  if (payload.os.linux.pid.self.status.VmRSS === undefined && payload.nodejs.memoryUsage.rss) {
-    payload.os.linux.pid.self.status.VmRSS = Math.ceil(payload.nodejs.memoryUsage.rss / 1024)
+  if (payload.environment.os.linux.pid.self.status.VmRSS === undefined && payload.nodejs.memoryUsage.rss) {
+    payload.environment.os.linux.pid.self.status.VmRSS = Math.ceil(payload.nodejs.memoryUsage.rss / 1024)
   }
 
   // Inject duration if it does not exist
