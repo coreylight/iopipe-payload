@@ -14,11 +14,11 @@
           }
         }
       }
-    },
-    "python": {},
-    "nodejs": {
-      "memoryUsage": {}
     }
+  },
+  "python": {},
+    "nodejs": {
+    "memoryUsage": {}
   },
   "errors": {},
   "events": {}
