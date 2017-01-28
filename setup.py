@@ -1,14 +1,10 @@
 #!/usr/bin/env python
 
-from pip.req import parse_requirements
 from pip.download import PipSession
 from setuptools import setup, find_packages
 
-install_reqs = parse_requirements('./requirements.txt', session=PipSession())
-reqs = [str(ir.req) for ir in install_reqs]
-
 setup(name='iopipe_payload',
-      version='1.0.0',
+      version='1.0.1',
       description='IOpipe payload schema & normalization library',
       author='IOpipe',
       author_email='support@iopipe.com',
