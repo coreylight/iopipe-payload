@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 install_reqs = parse_requirements('./requirements.txt', session=PipSession())
 reqs = [str(ir.req) for ir in install_reqs]
 
-setup(name='iopipe-payload',
+setup(name='iopipe_payload',
       version='1.0.0',
       description='IOpipe payload schema & normalization library',
       author='IOpipe',
