@@ -28,7 +28,7 @@ exports.normalize = function(input) {
     return (typeof(metric.name) === 'string')
   }).map(function trimLongValues(metric) {
     if (metric.s && typeof(metric.s) === 'string' && metric.s.length > 1024) {
-      metric.s = `Metric of length ${metric.s.length} is longer than allowed length of 1024. See https://support.iopipe.com for details`
+      metric.s = `Metric of length ${metric.s.length} is longer than allowed length of 1024. See https://support.iopipe.com/hc/en-us/articles/115002091867-How-do-I-use-custom-metrics-and-logs for details`
     }
     return metric
   })
