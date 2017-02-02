@@ -22,5 +22,16 @@ exports.normalize = function(input) {
     payload.errors.stackHash = crypto.createHash('sha256').update(payload.errors.stack).digest('hex');
   }
 
+  // Reject custom metrics with invalid keys, or large data
+  payload.custom_metrics = payload.custom_metrics.filter(function removeInvalidMetrics(metric) {
+    // metric names must be strings
+    return (typeof(metric.name) === 'string')
+  }).map(function trimLongValues(metric) {
+    if (metric.s && typeof(metric.s) === 'string') {
+      metric.s = metric.s.substring(0, 1024)
+    }
+    return metric
+  })
+
   return payload
 }
