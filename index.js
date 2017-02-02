@@ -27,8 +27,8 @@ exports.normalize = function(input) {
     // metric names must be strings
     return (typeof(metric.name) === 'string')
   }).map(function trimLongValues(metric) {
-    if (metric.s && typeof(metric.s) === 'string') {
-      metric.s = metric.s.substring(0, 1024)
+    if (metric.s && typeof(metric.s) === 'string' && metric.s.length > 1024) {
+      metric.s = `Metric of length ${metric.s.length} is longer than allowed length of 1024. See https://support.iopipe.com for details`
     }
     return metric
   })

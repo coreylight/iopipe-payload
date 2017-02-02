@@ -87,6 +87,6 @@ describe('payload', () => {
 
     expect(p.custom_metrics[0].s.length).toEqual(14)
     expect(longString.length).toEqual(1759) // verify long string is long for our test
-    expect(p.custom_metrics[1].s.length).toEqual(1024)
+    expect(p.custom_metrics[1].s).toEqual('Metric of length 1759 is longer than allowed length of 1024. See https://support.iopipe.com for details')
   })
 })
