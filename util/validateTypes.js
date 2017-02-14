@@ -20,7 +20,9 @@ module.exports = function validateTypes(oldObject, prop, schema) {
       else { return oldObject }
       break
     case 's':
-      if (typeof(oldObject) != 'string') {
+      // Check if it's not a string; if undefined, it will be dropped or handled
+      // in custom_metrics
+      if (typeof(oldObject) != 'string' && oldObject != undefined) {
         return String(oldObject)
       } else {
         return oldObject
@@ -39,12 +41,19 @@ module.exports = function validateTypes(oldObject, prop, schema) {
 
   // Clone each property.
   // Deal with arrays differently, because we only get 1 object
-  for (var prop in oldObject) {
-    // if property exists in the schema, clone the property
-    if (schema && schema[prop]) {
-      clonedObject[prop] = validateTypes(oldObject[prop], prop, schema[prop])
+  if (Array.isArray(oldObject)) {
+    oldObject.forEach(function handleRecord(item, index) {
+      clonedObject[index] = validateTypes(item, null, schema[0])
+    })
+  } else {
+    for (var key in oldObject) {
+      // if property exists in the schema, clone the property
+      if (schema && schema[key]) {
+        clonedObject[key] = validateTypes(oldObject[key], key, schema[key])
+      }
     }
   }
+
 
   return clonedObject
 }

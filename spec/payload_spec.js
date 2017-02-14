@@ -59,17 +59,17 @@ describe('payload', () => {
 
   it('truncates custom metrics that are too long', function() {
     var longString = 'this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length. this string is so long that it is not allowed so we cut it to a shorter length.'
-    // var p = payload.normalize({
-    //   custom_metrics: [{
-    //     name: 'valid-name',
-    //     s: 'cool data here'
-    //   },
-    //   {
-    //     name: 'key-with-long-value',
-    //     s: longString
-    //   }
-    // ]})
-    var p = payload.normalize(sample)
+    var sampleWithLongMetrics = Object.assign({}, sample, {
+      custom_metrics: [{
+        name: 'valid-name',
+        s: 'cool data here'
+      },
+      {
+        name: 'key-with-long-value',
+        s: longString
+      }
+    ]})
+    var p = payload.normalize(sampleWithLongMetrics)
 
     expect(p.custom_metrics[0].s.length).toEqual(14)
     expect(longString.length).toEqual(1759) // verify long string is long for our test
