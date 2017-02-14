@@ -21,17 +21,19 @@
     },
     "os": {
       "hostname": "s",
-      "totalmem": "s",
+      "totalmem": "n",
       "freemem": "n",
-      "cpus": {
-        "times": {
-          "idle": "n",
-          "irq": "n",
-          "sys": "n",
-          "user": "n",
-          "nice": "n"
+      "cpus": [
+        {
+          "times": {
+            "idle": "n",
+            "irq": "n",
+            "sys": "n",
+            "user": "n",
+            "nice": "n"
+          }
         }
-      },
+      ],
       "linux": {
         "cpu": {},
         "mem": {},
@@ -67,9 +69,11 @@
     "count": "n"
   },
   "events": {},
-  "custom_metrics": {
-    "name": "s",
-    "s": "s",
-    "n": "n"
-  }
+  "custom_metrics": [
+    {
+      "name": "s",
+      "s": "s",
+      "n": "n"
+    }
+  ]
 }
