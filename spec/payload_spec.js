@@ -15,15 +15,41 @@ describe('payload', () => {
   })
 
   it('errors on invalid field value types', () => {
-    // todo: test this across all or many fields.
+    // Object
     var sampleWithBadEnv = Object.assign({}, sample, {
       environment: 2
     })
 
+    // Array
+    var sampleWithBadCPU = Object.assign({}, sample, {
+      environment: {
+        os: {
+          cpus: 'I am not a CPU obj inside an array'
+        }
+      }
+    })
+
+    // Number
+    var sampleWithBadMemoryLimit = Object.assign({}, sample, {
+      aws: {
+        memoryLimitInMB: 'purple elephant'
+      }
+    })
+    // TODO: Int, string?
     var f = () => {
       payload.normalize(sampleWithBadEnv)
     }
+
+    var f2 = () => {
+      payload.normalize(sampleWithBadCPU)
+    }
+
+    var f3 = () => {
+      payload.normalize(sampleWithBadMemoryLimit)
+    }
     expect(f).toThrowError(TypeError)
+    expect(f2).toThrowError(TypeError)
+    expect(f3).toThrowError(TypeError)
   })
 
   it('calculates stackHash', () => {
