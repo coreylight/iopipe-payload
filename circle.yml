@@ -1,4 +1,6 @@
 dependencies:
+  pre:
+    - pip install flake8
   cache_directories:
     - ~/.cache/yarn
   override:
