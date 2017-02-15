@@ -1,6 +1,4 @@
 dependencies:
-  pre:
-    - pip install flake8
   cache_directories:
     - ~/.cache/yarn
   override:
@@ -13,9 +11,6 @@ machine:
 test:
   override:
     - yarn test
-    - python setup.py test
-  post:
-    - flake8 iopipe_payload
 deployment:
   release:
     # release on tagged versions
