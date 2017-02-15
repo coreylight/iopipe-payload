@@ -68,7 +68,6 @@
     "stackHash": "s",
     "count": "n"
   },
-  "events": {},
   "custom_metrics": [
     {
       "name": "s",
