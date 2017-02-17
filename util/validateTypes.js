@@ -1,32 +1,44 @@
+function validateNumber(item, prop) {
+  if (typeof(item) != 'number') {
+    if (!isNaN(Number(item))) {
+      return Number(item)
+    }
+    throw new TypeError(`${item} is not a number for ${prop}`)
+  }
+  return item
+}
+
+function validateInteger(item, prop) {
+  if (typeof(item) != 'number') {
+    if (!isNaN(Number(item))) {
+      return Math.trunc(Number(item))
+    }
+    throw new TypeError(`${item} is not a number for ${prop}`)
+  }
+  return Math.trunc(item)
+}
+
+function validateString(item, prop) {
+  // Check if it's not a string; if undefined, it will be dropped or handled
+  // in custom_metrics
+  if (typeof(item) != 'string' && item != undefined) {
+    return JSON.stringify(item)
+  } else {
+    return item
+  }
+}
+
 module.exports = function validateTypes(oldObject, prop, schema) {
   if (!(oldObject instanceof Object)) {
     switch (schema) {
     case 'n':
-      if (typeof(oldObject) != 'number') {
-        if (!isNaN(Number(oldObject))) {
-          return Number(oldObject)
-        }
-        throw new TypeError(`${oldObject} is not a number for ${prop}`)
-      }
-      else { return oldObject }
+      return validateNumber(oldObject, prop)
       break
     case 'i':
-      if (typeof(oldObject) != 'number') {
-        if (!isNaN(Number(oldObject))) {
-          return Number(oldObject)
-        }
-        throw new TypeError(`${oldObject} is not a number for ${prop}`)
-      }
-      else { return oldObject }
+      return validateInteger(oldObject, prop)
       break
     case 's':
-      // Check if it's not a string; if undefined, it will be dropped or handled
-      // in custom_metrics
-      if (typeof(oldObject) != 'string' && oldObject != undefined) {
-        return String(oldObject)
-      } else {
-        return oldObject
-      }
+      return validateString(oldObject, prop)
       break
     default:
       throw new TypeError(`${oldObject} is not of type ${schema} for ${prop}`)
@@ -53,7 +65,6 @@ module.exports = function validateTypes(oldObject, prop, schema) {
       }
     }
   }
-
 
   return clonedObject
 }
