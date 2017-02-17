@@ -1,25 +1,78 @@
 {
-  "aws": {},
+  "client_id": "s",
+  "duration": "i",
+  "aws": {
+    "awsRequestId": "s",
+    "invokedFunctionArn": "s",
+    "logGroupName": "s",
+    "logStreamName": "s",
+    "invokedFunctionArn": "s",
+    "memoryLimitInMB": "n"
+  },
   "environment": {
-    "host": {},
+    "nodejs": {
+      "version": "s",
+      "memoryUsage": {
+        "rss": "n"
+      }
+    },
+    "host": {
+      "vm_id": "s"
+    },
     "os": {
+      "hostname": "s",
+      "totalmem": "n",
+      "freemem": "n",
+      "cpus": [
+        {
+          "times": {
+            "idle": "n",
+            "irq": "n",
+            "sys": "n",
+            "user": "n",
+            "nice": "n"
+          }
+        }
+      ],
       "linux": {
         "cpu": {},
         "mem": {},
         "pid": {
           "self": {
-            "stat": {},
-            "stat_start": {},
-            "status": {}
+            "stat": {
+              "utime": "n",
+              "stime": "n",
+              "cutime": "n",
+              "cstime": "n"
+            },
+            "stat_start": {
+              "utime": "n",
+              "stime": "n",
+              "cutime": "n",
+              "cstime": "n"
+            },
+            "status": {
+              "VmRSS": "n",
+              "Threads": "n",
+              "FDSize": "n"
+            }
           }
         }
       }
     }
   },
-  "python": {},
-    "nodejs": {
-    "memoryUsage": {}
+  "errors": {
+    "stack": "s",
+    "name": "s",
+    "message": "s",
+    "stackHash": "s",
+    "count": "n"
   },
-  "errors": {},
-  "custom_metrics": []
+  "custom_metrics": [
+    {
+      "name": "s",
+      "s": "s",
+      "n": "n"
+    }
+  ]
 }
