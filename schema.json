@@ -71,6 +71,7 @@
     "stackHash": "s",
     "count": "n"
   },
+  "coldstart": "b",
   "custom_metrics": [
     {
       "name": "s",

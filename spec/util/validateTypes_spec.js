@@ -56,6 +56,20 @@ describe('string validation', function() {
   })
 })
 
+describe('boolean validation', function() {
+  it('returns booleans', function() {
+    expect(validateTypes(false, 'some_field', 'b')).toEqual(false)
+    expect(validateTypes(true, 'some_field', 'b')).toEqual(true)
+  })
+
+  it('throws if not a boolean', function() {
+    var f = function() {
+      validateTypes('false', 'some_field', 'b')
+    }
+    expect(f).toThrowError(TypeError)
+  })
+})
+
 describe('array validaton', function() {
   it('validates arrays with one type record', function() {
     expect(validateTypes([2,3.5,'4'], 'some_field', 'i')).toEqual([2,3,4])

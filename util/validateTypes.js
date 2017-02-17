@@ -18,7 +18,7 @@ function validateInteger(item, prop) {
   return Math.trunc(item)
 }
 
-function validateString(item, prop) {
+function validateString(item) {
   // Check if it's not a string; if undefined, it will be dropped or handled
   // in custom_metrics
   if (typeof(item) != 'string' && item != undefined) {
@@ -26,6 +26,13 @@ function validateString(item, prop) {
   } else {
     return item
   }
+}
+
+function validateBoolean(item, prop) {
+  if (typeof(item) != 'boolean') {
+    throw new TypeError(`${item} is not a boolean for ${prop}`)
+  }
+  return item
 }
 
 module.exports = function validateTypes(oldObject, prop, schema) {
@@ -38,8 +45,10 @@ module.exports = function validateTypes(oldObject, prop, schema) {
       return validateInteger(oldObject, prop)
       break
     case 's':
-      return validateString(oldObject, prop)
+      return validateString(oldObject)
       break
+    case 'b':
+      return validateBoolean(oldObject, prop)
     default:
       throw new TypeError(`${oldObject} is not of type ${schema} for ${prop}`)
     }
