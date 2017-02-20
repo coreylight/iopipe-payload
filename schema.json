@@ -10,6 +10,11 @@
     "memoryLimitInMB": "n"
   },
   "environment": {
+    "agent": {
+      "runtime": "s",
+      "version": "s",
+      "load_time": "n"
+    },
     "nodejs": {
       "version": "s",
       "memoryUsage": {
