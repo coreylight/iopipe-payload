@@ -16,6 +16,9 @@
         "rss": "n"
       }
     },
+    "python": {
+      "version": "s"
+    },
     "host": {
       "vm_id": "s"
     },
