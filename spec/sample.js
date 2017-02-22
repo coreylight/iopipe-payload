@@ -2,26 +2,27 @@ module.exports = {
     "environment": {
         "agent": {
             "runtime": "nodejs",
-            "version": "0.1.2"
+            "version": "0.2.0",
+            "load_time": 1487795111258
         },
         "host": {
-            "vm_id": "e79de621-0f15-4638-ab0d-44dc4c74b7a6"
+            "vm_id": "330dee9b-c2ea-4fbc-832f-3601e48c671c"
         },
         "os": {
-            "hostname": "ip-10-26-48-104",
-            "uptime": 11246,
+            "hostname": "ip-10-31-61-50",
+            "uptime": 4802,
             "totalmem": 3950452736,
-            "freemem": 1866575872,
-            "usedmem": 2083876864,
+            "freemem": 2783178752,
+            "usedmem": 1167273984,
             "cpus": [
                 {
                     "model": "Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz",
                     "speed": 2900,
                     "times": {
-                        "user": 494100,
-                        "nice": 13200,
-                        "sys": 140200,
-                        "idle": 111494400,
+                        "user": 102700,
+                        "nice": 13700,
+                        "sys": 74500,
+                        "idle": 47534500,
                         "irq": 0
                     }
                 },
@@ -29,10 +30,10 @@ module.exports = {
                     "model": "Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz",
                     "speed": 2900,
                     "times": {
-                        "user": 495400,
-                        "nice": 13400,
-                        "sys": 140900,
-                        "idle": 111475200,
+                        "user": 170900,
+                        "nice": 13000,
+                        "sys": 84600,
+                        "idle": 47483700,
                         "irq": 0
                     }
                 }
@@ -42,20 +43,24 @@ module.exports = {
                 "pid": {
                     "self": {
                         "stat_start": {
-                            "utime": "23",
-                            "stime": "0",
+                            "utime": "20",
+                            "stime": "3",
                             "cutime": "0",
                             "cstime": "0",
-                            "rss": "9225"
+                            "rss": "9128"
                         },
                         "stat": {
-                            "utime": "23",
-                            "stime": "0",
+                            "utime": "20",
+                            "stime": "3",
                             "cutime": "0",
                             "cstime": "0",
-                            "rss": "9225"
+                            "rss": "9128"
                         },
-                        "status": {}
+                        "status": {
+                            "FDSize": 128,
+                            "Threads": 9,
+                            "VmRSS": 36512
+                        }
                     }
                 }
             }
@@ -145,41 +150,37 @@ module.exports = {
                 "sourceUrl": "https://nodejs.org/download/release/v4.3.2/node-v4.3.2.tar.gz",
                 "headersUrl": "https://nodejs.org/download/release/v4.3.2/node-v4.3.2-headers.tar.gz"
             },
-            "uptime": 1.161,
-            "getuid": 481,
-            "getgid": 480,
-            "geteuid": 481,
-            "getegid": 480,
+            "uptime": 1.153,
+            "getuid": 482,
+            "getgid": 481,
+            "geteuid": 482,
+            "getegid": 481,
             "memoryUsage": {
-                "rss": 38055936,
+                "rss": 37896192,
                 "heapTotal": 19692912,
-                "heapUsed": 13081216
+                "heapUsed": 13039680
             }
         }
     },
     "aws": {
         "functionName": "qa-events_debug",
-        "functionVersion": "1",
+        "functionVersion": "8",
         "invokedFunctionArn": "arn:aws:lambda:us-east-1:554407330061:function:qa-events_debug:current",
         "memoryLimitInMB": "128",
-        "awsRequestId": "fd8e1043-f220-11e6-950f-7dd7b59adf97",
+        "awsRequestId": "01dfe372-f93d-11e6-b58d-11099a541afe",
         "logGroupName": "/aws/lambda/qa-events_debug",
-        "logStreamName": "2017/02/13/[1]fb1559d1bf5f48419f76c4e8cb6c594b"
+        "logStreamName": "2017/02/22/[8]709e96ae58124e61b3a6e8c8666af544"
     },
+    "coldstart": true,
     "errors": {},
-    "custom_metrics": [
-        {
-            "name": "coolthing",
-            "n": 2
-        }
-    ],
+    "custom_metrics": [],
     "time_sec_nanosec": [
         0,
-        158328486
+        192653591
     ],
     "time_sec": 0,
-    "time_nanosec": 158328486,
-    "duration": 158328486,
+    "time_nanosec": 192653591,
+    "duration": 192653591,
     "client_id": "testSuite",
-    "getRemainingTimeInMillis": 4821
+    "getRemainingTimeInMillis": 4805
 }
