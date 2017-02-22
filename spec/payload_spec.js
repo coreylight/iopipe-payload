@@ -101,4 +101,11 @@ describe('payload', () => {
     expect(longString.length).toEqual(1759) // verify long string is long for our test
     expect(p.custom_metrics[1].s).toEqual('Metric of length 1759 is longer than allowed length of 1024. See https://support.iopipe.com/hc/en-us/articles/115002091867-How-do-I-use-custom-metrics-and-logs for details')
   })
+
+  it('backfills container_id if vm_id is present', function() {
+    var p = payload.normalize(sample)
+
+    expect(p.environment.host.container_id).toBe('e79de621-0f15-4638-ab0d-44dc4c74b7a6')
+    expect(p.environment.host.vm_id).toBeUndefined()
+  })
 })

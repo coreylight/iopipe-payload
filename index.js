@@ -8,6 +8,11 @@ exports.normalize = function(input) {
   var payload = validateTypes(input || {}, null, PAYLOAD_SCHEMA)
   var fields = Object.keys(payload)
 
+  // 0.2.1 of node will send container_id, old versions send vm_id
+  if (input && input.environment && input.environment.host && input.environment.host.vm_id) {
+    payload.environment.host.container_id = input.environment.host.vm_id
+  }
+
   // Inject error hash
   if ((fields.indexOf('errors') > -1) && payload.errors.stack) {
     payload.errors.stackHash = crypto.createHash('sha256').update(payload.errors.stack).digest('hex');

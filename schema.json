@@ -25,7 +25,7 @@
       "version": "s"
     },
     "host": {
-      "vm_id": "s"
+      "container_id": "s"
     },
     "os": {
       "hostname": "s",
