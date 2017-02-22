@@ -1,0 +1,185 @@
+{
+  "environment": {
+    "python": {
+      "version": "2.7.12"
+    },
+    "host": {
+      "container_id": "a57219ab-e068-443d-b7a8-25cc5638279e"
+    },
+    "os": {
+      "uptime": 6314,
+      "totalmem": 3857864,
+      "linux": {
+        "mem": {
+          "WritebackTmp": 0,
+          "SwapTotal": 0,
+          "Active(anon)": 1113928,
+          "SwapFree": 0,
+          "KernelStack": 4032,
+          "MemFree": 2065416,
+          "HugePages_Rsvd": 0,
+          "Committed_AS": 1936444,
+          "NFS_Unstable": 0,
+          "Writeback": 56,
+          "Inactive(file)": 290000,
+          "MemTotal": 3857864,
+          "VmallocUsed": 0,
+          "DirectMap1G": 2097152,
+          "HugePages_Free": 0,
+          "AnonHugePages": 0,
+          "Shmem": 1784,
+          "Inactive": 290708,
+          "Active": 1325104,
+          "Inactive(anon)": 708,
+          "CommitLimit": 1928932,
+          "Hugepagesize": 2048,
+          "Cached": 450456,
+          "SwapCached": 0,
+          "VmallocTotal": 34359738367,
+          "VmallocChunk": 0,
+          "Dirty": 3632,
+          "Mapped": 40212,
+          "SUnreclaim": 36948,
+          "Unevictable": 0,
+          "SReclaimable": 75508,
+          "MemAvailable": 2491724,
+          "Slab": 112456,
+          "DirectMap2M": 1822720,
+          "HugePages_Surp": 0,
+          "Bounce": 0,
+          "HugePages_Total": 0,
+          "AnonPages": 1112892,
+          "PageTables": 9052,
+          "DirectMap4k": 12288,
+          "Mlocked": 0,
+          "Buffers": 52464,
+          "Active(file)": 211176
+        },
+        "pid": {
+          "self": {
+            "status": {
+              "VmExe": 4,
+              "CapBnd": "0000003fffffffff",
+              "NSpgid": 1,
+              "Tgid": 1,
+              "NSpid": 1,
+              "VmSize": 234780,
+              "VmPMD": 12,
+              "ShdPnd": 0,
+              "State": "R (running)",
+              "Gid": "479\t479\t479\t479",
+              "nonvoluntary_ctxt_switches": 16,
+              "SigIgn": 1001000,
+              "VmStk": 136,
+              "VmData": 10320,
+              "SigCgt": 180000002,
+              "CapEff": 0,
+              "VmPTE": 272,
+              "Groups": "",
+              "NStgid": 1,
+              "Threads": 1,
+              "PPid": 0,
+              "VmHWM": 19008,
+              "NSsid": 1,
+              "VmSwap": 0,
+              "Name": "python2.7",
+              "SigBlk": 0,
+              "Mems_allowed_list": 0,
+              "VmPeak": 234804,
+              "Ngid": 0,
+              "VmLck": 0,
+              "SigQ": "0/14984",
+              "VmPin": 0,
+              "Mems_allowed": "00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001",
+              "CapPrm": 0,
+              "CapAmb": 0,
+              "Seccomp": 2,
+              "VmLib": 11108,
+              "Cpus_allowed": "7fff",
+              "Uid": "480\t480\t480\t480",
+              "SigPnd": 0,
+              "Pid": 1,
+              "Cpus_allowed_list": "0-14",
+              "TracerPid": 0,
+              "CapInh": 0,
+              "voluntary_ctxt_switches": 17,
+              "HugetlbPages": 0,
+              "VmRSS": 18992,
+              "FDSize": 128
+            },
+            "stat": {
+              "cutime": 0,
+              "rss": 4746,
+              "cstime": 0,
+              "stime": 9,
+              "utime": 9
+            },
+            "stat_start": {
+              "cutime": 0,
+              "rss": 4747,
+              "cstime": 0,
+              "stime": 9,
+              "utime": 9
+            }
+          }
+        },
+        "cpu": {
+          "cpu": {
+            "softirq": "0",
+            "iowait": "1230371",
+            "system": "267",
+            "idle": "4132",
+            "user": "",
+            "irq": "899",
+            "nice": "22838"
+          },
+          "cpu0": {
+            "softirq": "94",
+            "iowait": "529",
+            "system": "2014",
+            "idle": "614140",
+            "user": "12926",
+            "irq": "0",
+            "nice": "134"
+          },
+          "cpu1": {
+            "softirq": "684",
+            "iowait": "370",
+            "system": "2118",
+            "idle": "616230",
+            "user": "9912",
+            "irq": "0",
+            "nice": "133"
+          }
+        }
+      },
+      "hostname": "ip-10-23-62-195",
+      "usedmem": 1792448,
+      "freemem": 2065416
+    },
+    "agent": {
+      "runtime": "python",
+      "version": "0.2.0"
+    }
+  },
+  "custom_metrics": [
+    {
+      "name": "time",
+      "n": 1487789474.708855
+    }
+  ],
+  "client_id": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImF1dGgwfDU4MTA4ZWU4MDA0NDE0YWU2NzkxMzMyZCIsInVzZXJuYW1lIjoiaW9waXBlX2RlbW8iLCJpYXQiOjE0Nzc0ODAxOTcsImF1ZCI6Imh0dHBzOi8vbWV0cmljcy1hcGkuaW9waXBlLmNvbS9ldmVudC8ifQ.rqy-hDI5x_nSJaQiVUviX5YH6OhzR7HMEQG79d_OuRw",
+  "duration": 163078,
+  "time_sec": 0,
+  "aws": {
+    "functionName": "qa-events_pydebug",
+    "invokedFunctionArn": "arn:aws:lambda:us-east-1:554407330061:function:qa-events_pydebug:current",
+    "getRemainingTimeInMillis": 4999,
+    "logGroupName": "/aws/lambda/qa-events_pydebug",
+    "awsRequestId": "e2c32e95-f92f-11e6-a97b-1b53922b2a31",
+    "functionVersion": "4",
+    "logStreamName": "2017/02/22/[4]2d01565d83d34f5ba01e3559749416f2",
+    "memoryLimitInMB": "128"
+  },
+  "time_nanosec": 163078
+}

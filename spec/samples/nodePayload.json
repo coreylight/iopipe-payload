@@ -1,4 +1,4 @@
-module.exports = {
+{
     "environment": {
         "agent": {
             "runtime": "nodejs",
@@ -181,6 +181,6 @@ module.exports = {
     "time_sec": 0,
     "time_nanosec": 192653591,
     "duration": 192653591,
-    "client_id": "testSuite",
+    "client_id": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImF1dGgwfDU4MTA4ZWU4MDA0NDE0YWU2NzkxMzMyZCIsInVzZXJuYW1lIjoiaW9waXBlX2RlbW8iLCJpYXQiOjE0Nzc0ODAxOTcsImF1ZCI6Imh0dHBzOi8vbWV0cmljcy1hcGkuaW9waXBlLmNvbS9ldmVudC8ifQ.rqy-hDI5x_nSJaQiVUviX5YH6OhzR7HMEQG79d_OuRw",
     "getRemainingTimeInMillis": 4805
 }

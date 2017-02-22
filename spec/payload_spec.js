@@ -1,5 +1,5 @@
 var payload = require('..')
-var sample = require('./sample.js')
+var sample = require('./samples/nodePayload.json')
 
 describe('payload', () => {
   it('accepts empty args & return object', () => {
@@ -105,15 +105,15 @@ describe('payload', () => {
   it('backfills container_id if vm_id is present', function() {
     var p = payload.normalize(sample)
 
-    expect(p.environment.host.container_id).toBe('e79de621-0f15-4638-ab0d-44dc4c74b7a6')
+    expect(p.environment.host.container_id).toBe('330dee9b-c2ea-4fbc-832f-3601e48c671c')
     expect(p.environment.host.vm_id).toBeUndefined()
   })
 
   it('backfills getRemainingTimeInMillis when not under aws key', function() {
     var p = payload.normalize(sample)
 
-    expect(sample.getRemainingTimeInMillis).toBe(4821)
+    expect(sample.getRemainingTimeInMillis).toBe(4805)
     expect(p.getRemainingTimeInMillis).toBeUndefined()
-    expect(p.aws.getRemainingTimeInMillis).toBe(4821)
+    expect(p.aws.getRemainingTimeInMillis).toBe(4805)
   })
 })
