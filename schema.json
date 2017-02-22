@@ -8,7 +8,6 @@
     "invokedFunctionArn": "s",
     "logGroupName": "s",
     "logStreamName": "s",
-    "invokedFunctionArn": "s",
     "memoryLimitInMB": "n",
     "getRemainingTimeInMillis": "n"
   },
@@ -34,6 +33,7 @@
       "hostname": "s",
       "totalmem": "n",
       "freemem": "n",
+      "usedmem": "n",
       "cpus": [
         {
           "times": {
@@ -46,8 +46,6 @@
         }
       ],
       "linux": {
-        "cpu": {},
-        "mem": {},
         "pid": {
           "self": {
             "stat": {
