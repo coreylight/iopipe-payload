@@ -1,6 +1,6 @@
 # IOpipe payload
 
-![CircleCI](https://circleci.com/gh/iopipe/iopipe-payload.svg?style=svg)](https://circleci.com/gh/iopipe/iopipe-payload)
+![https://circleci.com/gh/iopipe/iopipe-payload](https://circleci.com/gh/iopipe/iopipe-payload.svg?style=svg)
 
 Constructs and validates payloads for sending to the IOpipe event
 ingestion API. Used by the [iopipe module](https://github.com/iopipe/iopipe).
