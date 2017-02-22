@@ -108,4 +108,12 @@ describe('payload', () => {
     expect(p.environment.host.container_id).toBe('e79de621-0f15-4638-ab0d-44dc4c74b7a6')
     expect(p.environment.host.vm_id).toBeUndefined()
   })
+
+  it('backfills getRemainingTimeInMillis when not under aws key', function() {
+    var p = payload.normalize(sample)
+
+    expect(sample.getRemainingTimeInMillis).toBe(4821)
+    expect(p.getRemainingTimeInMillis).toBeUndefined()
+    expect(p.aws.getRemainingTimeInMillis).toBe(4821)
+  })
 })

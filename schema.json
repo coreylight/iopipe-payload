@@ -2,12 +2,15 @@
   "client_id": "s",
   "duration": "i",
   "aws": {
+    "functionName": "s",
+    "functionVersion": "s",
     "awsRequestId": "s",
     "invokedFunctionArn": "s",
     "logGroupName": "s",
     "logStreamName": "s",
     "invokedFunctionArn": "s",
-    "memoryLimitInMB": "n"
+    "memoryLimitInMB": "n",
+    "getRemainingTimeInMillis": "n"
   },
   "environment": {
     "agent": {

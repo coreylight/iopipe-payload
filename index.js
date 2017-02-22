@@ -13,6 +13,11 @@ exports.normalize = function(input) {
     payload.environment.host.container_id = input.environment.host.vm_id
   }
 
+  // fixed in 0.2.1 of node version
+  if (input && input.getRemainingTimeInMillis && payload.aws) {
+    payload.aws.getRemainingTimeInMillis = input.getRemainingTimeInMillis
+  }
+
   // Inject error hash
   if ((fields.indexOf('errors') > -1) && payload.errors.stack) {
     payload.errors.stackHash = crypto.createHash('sha256').update(payload.errors.stack).digest('hex');
