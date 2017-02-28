@@ -4,56 +4,56 @@
       "version": "2.7.12"
     },
     "host": {
-      "container_id": "a57219ab-e068-443d-b7a8-25cc5638279e"
+      "container_id": "41e20902-a64d-45f2-8fe2-d4ed092a870c"
     },
     "os": {
-      "uptime": 6314,
+      "uptime": 14699,
       "totalmem": 3857864,
       "linux": {
         "mem": {
           "WritebackTmp": 0,
           "SwapTotal": 0,
-          "Active(anon)": 1113928,
+          "Active(anon)": 166040,
           "SwapFree": 0,
-          "KernelStack": 4032,
-          "MemFree": 2065416,
+          "KernelStack": 2384,
+          "MemFree": 3161704,
           "HugePages_Rsvd": 0,
-          "Committed_AS": 1936444,
+          "Committed_AS": 397272,
           "NFS_Unstable": 0,
-          "Writeback": 56,
-          "Inactive(file)": 290000,
+          "Writeback": 0,
+          "Inactive(file)": 236880,
           "MemTotal": 3857864,
           "VmallocUsed": 0,
           "DirectMap1G": 2097152,
           "HugePages_Free": 0,
           "AnonHugePages": 0,
-          "Shmem": 1784,
-          "Inactive": 290708,
-          "Active": 1325104,
-          "Inactive(anon)": 708,
+          "Shmem": 172,
+          "Inactive": 237028,
+          "Active": 324608,
+          "Inactive(anon)": 148,
           "CommitLimit": 1928932,
           "Hugepagesize": 2048,
-          "Cached": 450456,
+          "Cached": 361528,
           "SwapCached": 0,
           "VmallocTotal": 34359738367,
           "VmallocChunk": 0,
-          "Dirty": 3632,
-          "Mapped": 40212,
-          "SUnreclaim": 36948,
+          "Dirty": 3644,
+          "Mapped": 37480,
+          "SUnreclaim": 31832,
           "Unevictable": 0,
-          "SReclaimable": 75508,
-          "MemAvailable": 2491724,
-          "Slab": 112456,
+          "SReclaimable": 51408,
+          "MemAvailable": 3470232,
+          "Slab": 83240,
           "DirectMap2M": 1822720,
           "HugePages_Surp": 0,
           "Bounce": 0,
           "HugePages_Total": 0,
-          "AnonPages": 1112892,
-          "PageTables": 9052,
+          "AnonPages": 166060,
+          "PageTables": 3880,
           "DirectMap4k": 12288,
           "Mlocked": 0,
-          "Buffers": 52464,
-          "Active(file)": 211176
+          "Buffers": 33992,
+          "Active(file)": 158568
         },
         "pid": {
           "self": {
@@ -63,29 +63,29 @@
               "NSpgid": 1,
               "Tgid": 1,
               "NSpid": 1,
-              "VmSize": 234780,
+              "VmSize": 234784,
               "VmPMD": 12,
               "ShdPnd": 0,
               "State": "R (running)",
-              "Gid": "479\t479\t479\t479",
-              "nonvoluntary_ctxt_switches": 16,
+              "Gid": "485\t485\t485\t485",
+              "nonvoluntary_ctxt_switches": 10,
               "SigIgn": 1001000,
               "VmStk": 136,
-              "VmData": 10320,
+              "VmData": 10324,
               "SigCgt": 180000002,
               "CapEff": 0,
-              "VmPTE": 272,
+              "VmPTE": 276,
               "Groups": "",
               "NStgid": 1,
               "Threads": 1,
               "PPid": 0,
-              "VmHWM": 19008,
+              "VmHWM": 19224,
               "NSsid": 1,
               "VmSwap": 0,
               "Name": "python2.7",
               "SigBlk": 0,
               "Mems_allowed_list": 0,
-              "VmPeak": 234804,
+              "VmPeak": 234808,
               "Ngid": 0,
               "VmLck": 0,
               "SigQ": "0/14984",
@@ -96,90 +96,92 @@
               "Seccomp": 2,
               "VmLib": 11108,
               "Cpus_allowed": "7fff",
-              "Uid": "480\t480\t480\t480",
+              "Uid": "486\t486\t486\t486",
               "SigPnd": 0,
               "Pid": 1,
               "Cpus_allowed_list": "0-14",
               "TracerPid": 0,
               "CapInh": 0,
-              "voluntary_ctxt_switches": 17,
+              "voluntary_ctxt_switches": 14,
               "HugetlbPages": 0,
-              "VmRSS": 18992,
-              "FDSize": 128
+              "VmRSS": 19208,
+              "FDSize": 64
             },
             "stat": {
               "cutime": 0,
-              "rss": 4746,
+              "rss": 4800,
               "cstime": 0,
-              "stime": 9,
-              "utime": 9
+              "stime": 10,
+              "utime": 10
             },
             "stat_start": {
               "cutime": 0,
-              "rss": 4747,
+              "rss": 4801,
               "cstime": 0,
-              "stime": 9,
-              "utime": 9
+              "stime": 10,
+              "utime": 10
             }
           }
         },
         "cpu": {
           "cpu": {
             "softirq": "0",
-            "iowait": "1230371",
-            "system": "267",
-            "idle": "4132",
+            "iowait": "2935630",
+            "system": "238",
+            "idle": "1166",
             "user": "",
-            "irq": "899",
-            "nice": "22838"
+            "irq": "796",
+            "nice": "1156"
           },
           "cpu0": {
-            "softirq": "94",
-            "iowait": "529",
-            "system": "2014",
-            "idle": "614140",
-            "user": "12926",
+            "softirq": "4",
+            "iowait": "444",
+            "system": "583",
+            "idle": "1467849",
+            "user": "480",
             "irq": "0",
-            "nice": "134"
+            "nice": "116"
           },
           "cpu1": {
-            "softirq": "684",
-            "iowait": "370",
-            "system": "2118",
-            "idle": "616230",
-            "user": "9912",
+            "softirq": "6",
+            "iowait": "351",
+            "system": "582",
+            "idle": "1467780",
+            "user": "676",
             "irq": "0",
-            "nice": "133"
+            "nice": "122"
           }
         }
       },
-      "hostname": "ip-10-23-62-195",
-      "usedmem": 1792448,
-      "freemem": 2065416
+      "hostname": "ip-10-39-75-245",
+      "usedmem": 696160,
+      "freemem": 3161704
     },
     "agent": {
+      "load_time": 1488297734138.726,
       "runtime": "python",
-      "version": "0.2.0"
-    }
+      "version": "0.3.0"
+    },
+    "coldstart": true
   },
   "custom_metrics": [
     {
       "name": "time",
-      "n": 1487789474.708855
+      "n": 1488297734.139386
     }
   ],
-  "client_id": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImF1dGgwfDU4MTA4ZWU4MDA0NDE0YWU2NzkxMzMyZCIsInVzZXJuYW1lIjoiaW9waXBlX2RlbW8iLCJpYXQiOjE0Nzc0ODAxOTcsImF1ZCI6Imh0dHBzOi8vbWV0cmljcy1hcGkuaW9waXBlLmNvbS9ldmVudC8ifQ.rqy-hDI5x_nSJaQiVUviX5YH6OhzR7HMEQG79d_OuRw",
-  "duration": 163078,
+  "client_id": "testSuite",
+  "duration": 230073,
   "time_sec": 0,
   "aws": {
     "functionName": "qa-events_pydebug",
     "invokedFunctionArn": "arn:aws:lambda:us-east-1:554407330061:function:qa-events_pydebug:current",
     "getRemainingTimeInMillis": 4999,
     "logGroupName": "/aws/lambda/qa-events_pydebug",
-    "awsRequestId": "e2c32e95-f92f-11e6-a97b-1b53922b2a31",
-    "functionVersion": "4",
-    "logStreamName": "2017/02/22/[4]2d01565d83d34f5ba01e3559749416f2",
+    "awsRequestId": "44cef45d-fdcf-11e6-9a94-915c63666d33",
+    "functionVersion": "5",
+    "logStreamName": "2017/02/28/[5]c214b54d7cf9451299693a18020296f4",
     "memoryLimitInMB": "128"
   },
-  "time_nanosec": 163078
+  "time_nanosec": 230073
 }
